@@ -39,7 +39,7 @@ CLAUDE_OPENCODE_LOG=debug claude
 
 ## The tool call times out in Claude Code
 
-- Set `"timeout": 600000` in the `.mcp.json` server entry (per-tool wall clock).
+- Set `"timeout": 2400000` in the `.mcp.json` server entry (per-tool wall clock).
 - `MCP_TOOL_TIMEOUT` raises the default for all servers.
 - Claude Code backgrounds calls after two minutes; this is normal and the
   result still arrives.

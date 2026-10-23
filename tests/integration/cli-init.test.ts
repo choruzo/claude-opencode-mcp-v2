@@ -60,7 +60,7 @@ describe("claude-opencode init", () => {
 
     const mcp = JSON.parse(await fs.promises.readFile(path.join(project, ".mcp.json"), "utf8"));
     expect(mcp.mcpServers.opencode.command).toBe("npx");
-    expect(mcp.mcpServers.opencode.timeout).toBe(600000);
+    expect(mcp.mcpServers.opencode.timeout).toBe(2400000);
 
     const sourceAfter = await fs.promises.readFile(path.join(project, "package.json"), "utf8");
     expect(sourceAfter).toBe(sourceBefore);

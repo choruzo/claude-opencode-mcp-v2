@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0-alpha.5] - 2026-10-23
+
+### Changed
+- The default execution timeout (`timeouts.execution`), the generated `.mcp.json` / `init` timeout and the plugin's MCP `timeout` go from 10 to 40 minutes (`2400000` ms).
+
 ## [2.0.0-alpha.4] - 2026-10-18
 
 ### Added

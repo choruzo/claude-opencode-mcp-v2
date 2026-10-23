@@ -30,7 +30,7 @@ const CONFIG_TEMPLATE = {
     denyGitCommit: true,
   },
   timeouts: {
-    execution: 600000,
+    execution: 2400000,
   },
 };
 
@@ -176,7 +176,7 @@ export async function runInit(options: InitOptions): Promise<number> {
           command: "npx",
           args: ["-y", "claude-opencode-mcp"],
           type: "stdio",
-          timeout: 600000,
+          timeout: 2400000,
         },
       },
     };

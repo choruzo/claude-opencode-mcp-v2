@@ -37,7 +37,7 @@ the offending fields.
     "model": null
   },
   "timeouts": {
-    "execution": 600000
+    "execution": 2400000
   },
   "security": {
     "protectEnvFiles": true,
@@ -98,7 +98,7 @@ the offending fields.
 
 | Key | Default | Meaning |
 | --- | --- | --- |
-| `execution` | `600000` | Default per-run timeout in milliseconds. Tools may override with `timeout`. |
+| `execution` | `2400000` | Default per-run timeout in milliseconds. Tools may override with `timeout`. |
 
 ### `security`
 

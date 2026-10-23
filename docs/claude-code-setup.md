@@ -13,7 +13,7 @@ Create `.mcp.json` at your project root:
       "command": "npx",
       "args": ["-y", "claude-opencode-mcp"],
       "type": "stdio",
-      "timeout": 600000
+      "timeout": 2400000
     }
   }
 }

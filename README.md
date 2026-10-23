@@ -130,7 +130,7 @@ On older Claude Code versions, add the marketplace first:
 ```
 
 The plugin runs the server with `npx -y claude-opencode-mcp-v2@alpha` and a
-10-minute tool timeout. Its tools appear as
+40-minute tool timeout. Its tools appear as
 `mcp__plugin_opencode-bridge_opencode__*`. Don't also register the server
 through `.mcp.json`, or Claude will see two copies of every tool.
 
@@ -147,7 +147,7 @@ Create `.mcp.json` in your project root:
       "command": "npx",
       "args": ["-y", "claude-opencode-mcp-v2@alpha"],
       "type": "stdio",
-      "timeout": 600000
+      "timeout": 2400000
     }
   }
 }
@@ -287,7 +287,7 @@ Run one task in a fresh session and wait for the agent's answer.
   "cwd": "/Users/andy/projects/my-app",
   "paths": ["src/auth", "src/middleware", "tests/auth"],
   "model": "deepseek/deepseek-v4-pro",
-  "timeout": 600000,
+  "timeout": 2400000,
   "allow_edits": false
 }
 ```
@@ -489,7 +489,7 @@ Extra file: `CLAUDE_OPENCODE_CONFIG=/path/to/config.json` (highest precedence).
     "model": null
   },
   "timeouts": {
-    "execution": 600000
+    "execution": 2400000
   },
   "security": {
     "protectEnvFiles": true,
@@ -544,7 +544,7 @@ Full reference: [docs/configuration.md](docs/configuration.md).
 | `AGENT_TIMEOUT` | raise `timeouts.execution` or the `timeout` argument; consider a narrower task. |
 | `WORKSPACE_NOT_ALLOWED` | add the project to `workspace.allowedRoots` or clear the list. |
 | Tool call seems to hang in Claude Code | Claude Code backgrounds long calls after 2 minutes; progress notifications are sent, and the bridge always resolves or aborts — check `bridge.log`. |
-| Claude Code kills the call at 60s | set `"timeout": 600000` in the `.mcp.json` entry (or `MCP_TOOL_TIMEOUT`). |
+| Claude Code kills the call at 60s | set `"timeout": 2400000` in the `.mcp.json` entry (or `MCP_TOOL_TIMEOUT`). |
 
 More: [docs/troubleshooting.md](docs/troubleshooting.md).
 

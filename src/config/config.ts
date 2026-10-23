@@ -72,7 +72,7 @@ export const BridgeConfigSchema = z.object({
     .prefault({}),
   timeouts: z
     .object({
-      execution: z.number().int().positive().default(600_000),
+      execution: z.number().int().positive().default(2_400_000),
     })
     .prefault({}),
   security: SecurityConfigSchema,

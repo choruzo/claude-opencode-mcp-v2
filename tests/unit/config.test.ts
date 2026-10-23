@@ -37,7 +37,7 @@ describe("config defaults", () => {
     expect(config.opencode.startupTimeout).toBe(30_000);
     expect(config.defaults.agent).toBe("researcher");
     expect(config.defaults.model).toBeNull();
-    expect(config.timeouts.execution).toBe(600_000);
+    expect(config.timeouts.execution).toBe(2_400_000);
     expect(config.security.protectEnvFiles).toBe(true);
     expect(config.security.denyGitPush).toBe(true);
     expect(config.security.denyGitCommit).toBe(true);
@@ -102,7 +102,7 @@ describe("resolveExecutionTimeout", () => {
   });
 
   it("falls back to config and rejects invalid overrides", () => {
-    expect(resolveExecutionTimeout(DEFAULT_CONFIG)).toBe(600_000);
+    expect(resolveExecutionTimeout(DEFAULT_CONFIG)).toBe(2_400_000);
     expect(() => resolveExecutionTimeout(DEFAULT_CONFIG, -1)).toThrowError(BridgeError);
   });
 });

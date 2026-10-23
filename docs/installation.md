@@ -25,7 +25,7 @@ Or use `npx` in the Claude Code configuration (no global install):
       "command": "npx",
       "args": ["-y", "claude-opencode-mcp"],
       "type": "stdio",
-      "timeout": 600000
+      "timeout": 2400000
     }
   }
 }
